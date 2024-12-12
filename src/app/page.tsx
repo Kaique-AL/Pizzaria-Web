@@ -1,4 +1,4 @@
-import style from "./page.module.scss";
+import styles from "./page.module.scss";
 import logoImg from "../../public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +6,7 @@ import { api } from "@/services/api";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { toast } from "sonner";
+import { Button } from "./dashboard/components/button";
 
 
 export default function Home() {
@@ -54,19 +55,19 @@ export default function Home() {
 
   return (
     <>
-      <div className={style.containerCenter}>
+      <div className={styles.containerCenter}>
         <Image
           src={logoImg}
           alt="logo da pizzaria"
         />
 
-        <section className={style.login}>
+        <section className={styles.login}>
           <form action={handleLogin}>
             <input type="email" 
               required
               name="email"
               placeholder="Digite seu email"
-              className={style.input}
+              className={styles.input}
             
             />
 
@@ -74,13 +75,13 @@ export default function Home() {
               required
               name="password"
               placeholder="************"
-              className={style.input}
+              className={styles.input}
             />
-
+            
             <button type="submit">Entrar</button>
           </form>
 
-          <Link href="/signup" className={style.register}>Não possui uma conta? Cadastre-se</Link>
+          <Link href="/signup" className={styles.register}>Não possui uma conta? Cadastre-se</Link>
         </section>
 
       </div>

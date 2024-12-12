@@ -1,36 +1,50 @@
-
-.containerCenter{
+.containerCenter {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-900);
-    padding: 0 1.5rem;
-}
-
-.login{
+  }
+  
+  .login {
     margin-top: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 16px;
-
-
-    form{
+    width: 90%;
+  
+    form {
+      color: var(--white);
+      padding-bottom: 16px;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      width: 100%;
+      gap: 16px;
+  
+      .input {
+        height: 36px; 
+        width: 50%; 
+        border: 1px solid var(--gray-100);
+        padding: 0 16px;
+        border-radius: 8px;
+        background-color: var(--dark-900);
         color: var(--white);
-        padding-bottom: 16px;
-        font-size: 18px;
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        gap: 16px;
-    }
-
-    form button{
-        height: 40px;
-        font-size: 16px;
+        font-size: 14px; 
+      }
+  
+      .input::placeholder {
+        color: var(--gray-100);
+      }
+  
+      button {
+        height: 36px; 
+        width: 50%;
+        font-size: 14px; 
+        font-weight: bold;
         background-color: var(--red-900);
         border: 0;
         border-radius: 8px;
@@ -39,39 +53,26 @@
         align-items: center;
         justify-content: center;
         transition: all 0.5s;
-    }
-
-    form button:hover{
+      }
+  
+      button:hover {
         transform: scale(1.05);
+      }
     }
-
-    h1{
-        color: var(--white);
+  
+    h1 {
+      color: var(--white);
     }
-}
-
-
-.input{
-    height: 40px;
-    border: 1px solid var(--gray-100);
-    padding: 16px;
-    border-radius: 8px;
-    background-color: var(--dark-900);
+  }
+  
+  .register {
     color: var(--white);
     font-size: 16px;
-}
-
-.input::placeholder{
-    color: var(--gray-100);
-}
-
-.register{
-    color: var(--white);
-    font-size: 16px;
-}
-
-@media(min-width: 620px){
-    .login{
-        width: 90%;
+  }
+  
+  @media (min-width: 620px) {
+    .login {
+      width: 80%;
     }
-}
+  }
+  
